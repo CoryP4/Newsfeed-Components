@@ -35,9 +35,10 @@ function menuMaker (arr) {
   })
 
   const menButton = document.querySelector('.menu-button')
+
   
   menButton.addEventListener('click', (e) => {
-    menButton.toggleAttribute('menu--open')
+    menDiv.classList.toggle("menu--open")
   })
 
   return menDiv
