@@ -91,40 +91,40 @@ const data = [
     title: 'AWESOME AWESOME AWESOME AWESOME AWESOME',
     date: 'Aug 9th, 2012',
     firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-    pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-    Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-    in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-    per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-    vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-    Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-    faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-    Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-    Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-    non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
 
     secondParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-    pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-    Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-    in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-    per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-    vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-    Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-    faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-    Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-    Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-    non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
 
     thirdParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
-    pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
-    Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
-    in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
-    per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
-    vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
-    Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
-    faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
-    Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
-    Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
-    non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`
   }
 ];
 
@@ -198,6 +198,47 @@ console.log(articleMaker(data[1]))
   Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
   to create a div.article element and append it to the DOM inside div.articles (see index.html).
 */
+data.push(
+  {
+    title: 'AWESOME2 AWESOME2 AWESOME2 AWESOME2 AWESOME2',
+    date: 'Aug 10th, 2020',
+    firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+
+    secondParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`
+  }
+)
 
 data.forEach(ele => {
 
@@ -210,4 +251,4 @@ articlesContainer.appendChild(articleMaker(ele))
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
-
+// Tried: completed in 2 ways above.
