@@ -86,6 +86,45 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'AWESOME AWESOME AWESOME AWESOME AWESOME',
+    date: 'Aug 9th, 2012',
+    firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+
+    secondParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`
   }
 ];
 
@@ -102,15 +141,114 @@ const data = [
 
     <span class="expandButton">+</span>
   </div>
+*/
+function articleMaker (article) {
+  const newDiv = document.createElement('div')
+  newDiv.classList.add('article')
 
+  const newH2 = document.createElement('h2')
+  newH2.textContent = article.title
+  newDiv.appendChild(newH2)
+
+  const newP = document.createElement('p')
+  newP.classList.add('date')
+  newP.textContent = article.date
+  newDiv.appendChild(newP)
+
+  const newP1 = document.createElement('p')
+  newP1.classList.add('firstParagraph')
+  newP1.textContent = article.firstParagraph
+  newDiv.appendChild(newP1)
+
+  const newP2 = document.createElement('p')
+  newP2.classList.add('secondParagraph')
+  newP2.textContent = article.secondParagraph
+  newDiv.appendChild(newP2)
+
+  const newP3 = document.createElement('p')
+  newP3.classList.add('thirdParagraph')
+  newP3.textContent = article.thirdParagraph
+  newDiv.appendChild(newP3)
+
+  const newSpan = document.createElement('span')
+  newSpan.classList.add('expandButton')
+  newSpan.textContent = '+'
+  newDiv.appendChild(newSpan)
+
+  /*
   Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
   This listener should toggle the class 'article-open' on div.article.
+  */
 
+  newSpan.addEventListener('click', () => {
+    newDiv.classList.toggle('article-open')
+  })
+
+
+  return newDiv
+}
+
+/*
   Step 3: Don't forget to return something from your function!
+*/
 
+console.log(articleMaker(data[1]))
+
+/*
   Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
   to create a div.article element and append it to the DOM inside div.articles (see index.html).
+*/
+data.push(
+  {
+    title: 'AWESOME2 AWESOME2 AWESOME2 AWESOME2 AWESOME2',
+    date: 'Aug 10th, 2020',
+    firstParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
 
+    secondParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`,
+
+    thirdParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, 
+          pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. 
+          Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, 
+          in pretium orci vestibulum eget. Class aptent taciti sociosqu ad litora torquent
+          per conubia nostra, per inceptos himenaeos. Duis pharetra luctus lacus ut 
+          vestibulum. Maecenas ipsum lacus, lacinia quis posuere ut, pulvinar vitae dolor.
+          Integer eu nibh at nisi ullamcorper sagittis id vel leo. Integer feugiat 
+          faucibus libero, at maximus nisl suscipit posuere. Morbi nec enim nunc. 
+          Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin elit convallis. 
+          Cras pharetra mi tristique sapien vestibulum lobortis. Nam eget bibendum metus, 
+          non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.`
+  }
+)
+
+data.forEach(ele => {
+
+const articlesContainer = document.querySelector('.articles')
+articlesContainer.appendChild(articleMaker(ele))
+
+})
+
+/*
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+// Tried: completed in 2 ways above.
